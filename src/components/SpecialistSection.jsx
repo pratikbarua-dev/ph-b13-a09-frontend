@@ -1,4 +1,6 @@
-// components/SpecialistsSection.tsx
+// components/SpecialistSection.jsx
+
+"use client";
 
 import Image from "next/image";
 import Link from "next/link";
@@ -28,11 +30,11 @@ const doctors = [
   },
 ];
 
-export default function SpecialistsSection() {
+export default function SpecialistSection() {
   return (
     <section className="bg-[#f5f7fb] px-6 py-14">
       <div className="mx-auto max-w-7xl">
-        {/* Top Heading */}
+        
         <div className="mb-10 flex flex-col justify-between gap-4 md:flex-row md:items-center">
           <div>
             <h2 className="text-4xl font-bold text-gray-900">
@@ -46,21 +48,19 @@ export default function SpecialistsSection() {
 
           <Link
             href="/doctors"
-            className="flex items-center gap-2 text-sm font-semibold text-blue-600 hover:text-blue-700"
+            className="flex items-center gap-2 text-sm font-semibold text-blue-600"
           >
             View All Doctors
             <ArrowRight size={16} />
           </Link>
         </div>
 
-        {/* Cards */}
         <div className="grid gap-6 md:grid-cols-3">
           {doctors.map((doctor, index) => (
             <div
               key={index}
-              className="rounded-2xl bg-white p-8 shadow-md transition hover:shadow-lg"
+              className="rounded-2xl bg-white p-8 shadow-md"
             >
-              {/* Image */}
               <div className="flex justify-center">
                 <div className="relative h-24 w-24 overflow-hidden rounded-full">
                   <Image
@@ -72,7 +72,6 @@ export default function SpecialistsSection() {
                 </div>
               </div>
 
-              {/* Info */}
               <div className="mt-6 text-center">
                 <h3 className="text-2xl font-bold text-gray-800">
                   {doctor.name}
@@ -82,7 +81,6 @@ export default function SpecialistsSection() {
                   {doctor.specialty}
                 </span>
 
-                {/* Rating */}
                 <div className="mt-4 flex items-center justify-center gap-1 text-yellow-400">
                   {[...Array(5)].map((_, i) => (
                     <Star
@@ -98,8 +96,7 @@ export default function SpecialistsSection() {
                   </span>
                 </div>
 
-                {/* Button */}
-                <button className="mt-6 w-full rounded-md border border-blue-500 py-2 text-sm font-semibold text-blue-600 transition hover:bg-blue-50">
+                <button className="mt-6 w-full rounded-md border border-blue-500 py-2 text-sm font-semibold text-blue-600">
                   View Details
                 </button>
               </div>
