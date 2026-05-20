@@ -1,7 +1,5 @@
 // components/BrowseCategory.jsx
 
-"use client";
-
 import {
   Heart,
   Brain,

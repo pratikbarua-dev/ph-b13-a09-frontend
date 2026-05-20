@@ -1,21 +1,17 @@
 // components/BookSteps.jsx
 
-"use client";
-
 import { Search, CalendarDays, CheckCircle2 } from "lucide-react";
 
 const steps = [
   {
     title: "1. Search Doctor",
-    description:
-      "Find a specialist based on your needs and location.",
+    description: "Find a specialist based on your needs and location.",
     icon: Search,
     active: false,
   },
   {
     title: "2. Choose Time",
-    description:
-      "Select an available slot that fits your schedule.",
+    description: "Select an available slot that fits your schedule.",
     icon: CalendarDays,
     active: false,
   },

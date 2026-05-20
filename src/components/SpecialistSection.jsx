@@ -1,7 +1,5 @@
 // components/SpecialistSection.jsx
 
-"use client";
-
 import Image from "next/image";
 import Link from "next/link";
 import { Star, ArrowRight } from "lucide-react";
@@ -34,7 +32,6 @@ export default function SpecialistSection() {
   return (
     <section className="bg-[#f5f7fb] px-6 py-14">
       <div className="mx-auto max-w-7xl">
-        
         <div className="mb-10 flex flex-col justify-between gap-4 md:flex-row md:items-center">
           <div>
             <h2 className="text-4xl font-bold text-gray-900">
@@ -57,10 +54,7 @@ export default function SpecialistSection() {
 
         <div className="grid gap-6 md:grid-cols-3">
           {doctors.map((doctor, index) => (
-            <div
-              key={index}
-              className="rounded-2xl bg-white p-8 shadow-md"
-            >
+            <div key={index} className="rounded-2xl bg-white p-8 shadow-md">
               <div className="flex justify-center">
                 <div className="relative h-24 w-24 overflow-hidden rounded-full">
                   <Image
